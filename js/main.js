@@ -1,98 +1,70 @@
+console.log(document.querySelector("title").innerText);
 
-console.log(document.querySelector('title').innerText)
+const lista1 = document.querySelectorAll("dl")[0]; //primera lista de elemento
+const listaAlum1 = lista1.querySelectorAll("dd"); //accediendo a los valores de la primera lista
+const lista2 = document.querySelectorAll("dl")[1]; //segunda lista de elemento
+const listaAlum2 = lista2.querySelectorAll("dd"); //accediendo a los valores de la segunda lista
 
-
-/* ---------------------------------------------------------- */
-/* integrante uno */
-const i1n = document.querySelector('.integrante1__nombre').innerText
-const i1sn = document.querySelector('.integrante1__segundo-nombre').innerText
-const i1a = document.querySelector('.integrante1__apellido').innerText
-const i1sa = document.querySelector('.integrante1__segundo-apellido').innerText
-
-/* integrante dos */
-const i2n = document.querySelector('.integrante2__nombre').innerText
-const i2sn = document.querySelector('.integrante2__segundo-nombre').innerText
-const i2a = document.querySelector('.integrante2__apellido').innerText
-const i2sa = document.querySelector('.integrante2__segundo-apellido').innerText
-
-const listaAlum1 = document.querySelectorAll("dl.lista_card > dd");
-const listaAlum2 = document.querySelectorAll("dl.lista__card > dd");
-console.log(listaAlum1, listaAlum2);
-
-
-
+/*funcion que filtar los nombres */
 function nombreCompleto(alumno) {
-    let nombreS = [];
-    for (let i = 0; i < alumno.length; i++) {
-      if (alumno[i].innerText == []) {
-        
-      } else if (alumno[3] == []) { 
-
-      } else {
-        nombreS = nombreS + alumno[i].innerText + " ";
-      }
+  let nombreS = [];
+  for (let i = 0; i < alumno.length; i++) {
+    if (alumno[i].innerText == []) {
+    } else if (i === 0) {
+      nombreS = nombreS + alumno[i].innerText;
+    } else {
+      nombreS = nombreS + " " + alumno[i].innerText;
     }
-    return nombreS;
   }
+  return nombreS;
+}
 
-  let alumno1 = nombreCompleto(listaAlum1);
-  let alumno2 = nombreCompleto(listaAlum2);
-  console.log(listaAlum1[1].innerText)
+let alumno1 = nombreCompleto(listaAlum1);
+let alumno2 = nombreCompleto(listaAlum2);
 
-  console.log(
-    '----- \nIntegrante 1: "' +
-      alumno1 +
-      '"\nIntegrante 2: "' +
-      alumno2 +
-      '"\n-----'
-  );
-
-
-
-
-console.log(`-----
-Integrante 1: "${i1n}${i1sn} ${i1a} ${i1sa}"
-Integrante 2: "${i2n}${i2sn} ${i2a}${i2sa}"
------`)
+console.log(
+  '----- \nIntegrante 1: "' +
+    alumno1 +
+    '"\nIntegrante 2: "' +
+    alumno2 +
+    '"\n-----'
+);
 
 /* --------------------------------------------------------- */
 
-
-    if(i1n === i2n){
-        prompt('si son iguales. Elija un color para destacar los nombres')
-        console.log('hubo coincidencias')
-    }else if(i1n === i2sn){
-        prompt('si son iguales. Elija un color para destacar los nombres')
-        console.log('hubo coincidencias')
-    /* }else if(i1sn === i2n){
+if (i1n === i2n) {
+  prompt("si son iguales. Elija un color para destacar los nombres");
+  console.log("hubo coincidencias");
+} else if (i1n === i2sn) {
+  prompt("si son iguales. Elija un color para destacar los nombres");
+  console.log("hubo coincidencias");
+  /* }else if(i1sn === i2n){
         prompt('si son iguales. Elija un color para destacar los nombres')
         console.log('hubo coincidencias')
     }else if(i1sn === i2sn){
         prompt('si son iguales. Elija un color para destacar los nombres')
         console.log('hubo coincidencias') */
-    }else{
-        console.log('No hubo coincidencias en los nombres de los integrantes')
-    }
+} else {
+  console.log("No hubo coincidencias en los nombres de los integrantes");
+}
 
-    window.confirm("¿Quieres comparar los apellidos?");
+window.confirm("¿Quieres comparar los apellidos?");
 
-
-    if(i1a === i2a){
-        prompt('si son iguales. Elija un color para destacar los nombres')
-        console.log('hubo coincidencias')
-    }else if(i1a === i2sa){
-        prompt('si son iguales. Elija un color para destacar los nombres')
-        console.log('hubo coincidencias')
-    /* }else if(i1sa === i2a){
+if (i1a === i2a) {
+  prompt("si son iguales. Elija un color para destacar los nombres");
+  console.log("hubo coincidencias");
+} else if (i1a === i2sa) {
+  prompt("si son iguales. Elija un color para destacar los nombres");
+  console.log("hubo coincidencias");
+  /* }else if(i1sa === i2a){
         prompt('si son iguales. Elija un color para destacar los nombres')
         console.log('hubo coincidencias')
     }else if(i1sa === i2sa){
         prompt('si son iguales. Elija un color para destacar los nombres')
         console.log('hubo coincidencias') */
-    }else{
-        console.log('No hubo coincidencias en los apellidos de los integrantes')
-    };
-
+} else {
+  console.log("No hubo coincidencias en los apellidos de los integrantes");
+}
 
 /* --------------------------------------------------------- */
 
@@ -114,16 +86,3 @@ let comparacion2 = integrantes.forEach( function (igualdad) {
     }
 
 }) */
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-  
