@@ -5,6 +5,7 @@ const listaAlum1 = lista1.querySelectorAll("dd"); //accediendo a los valores de 
 const lista2 = document.querySelectorAll("dl")[1]; //segunda lista de elemento
 const listaAlum2 = lista2.querySelectorAll("dd"); //accediendo a los valores de la segunda lista
 
+console.log(listaAlum1);
 /*funcion que filtar los nombres */
 function nombreCompleto(alumno) {
   let nombreS = [];
@@ -30,7 +31,24 @@ console.log(
     '"\n-----'
 );
 
-/* --------------------------------------------------------- */
+/* ------------------------------------------ */
+
+function compararNombres(primero) {
+  let colorDeCoincidencia;
+  for (let i = 0; i < primero.length; i++) {
+    if (primero[i].innerText == []) {
+    } else if (primero[i].innerText === alumno2[1].innerText) {
+      console.log("hubo coincidencia");
+      colorDeCoincidencia = prompt("hubo coincidencia. Dime un color");
+    } else {
+    }
+  }
+  return colorDeCoincidencia;
+}
+
+let comparar1 = compararNombres(alumno1);
+
+console.log(comparar1);
 
 if (i1n === i2n) {
   prompt("si son iguales. Elija un color para destacar los nombres");
