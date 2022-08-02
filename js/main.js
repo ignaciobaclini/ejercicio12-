@@ -33,20 +33,29 @@ console.log(
 
 /* ------------------------------------------ */
 
-function compararNombres(primero) {
-  let colorDeCoincidencia;
-  for (let i = 0; i < primero.length; i++) {
-    if (primero[i].innerText == []) {
-    } else if (primero[i].innerText === alumno2[1].innerText) {
-      console.log("hubo coincidencia");
-      colorDeCoincidencia = prompt("hubo coincidencia. Dime un color");
-    } else {
+function compararNombres(persona1, persona2) {
+  let encuentra = false;
+  for (let i = 0; i < persona1.length; i++) {
+    encuentra = false;
+    for (let j = 0; j < persona2.length; j++) {
+      if (persona1[i].innerText == persona2[j].innerText) {
+        encuentra = true;
+        break;
+      }
+    }
+    if (!encuentra) {
+      alert("los arreglos no son iguales");
+      break;
     }
   }
-  return colorDeCoincidencia;
+  if (encuentra) {
+    alert("si son iguales");
+  }
 }
 
-let comparar1 = compararNombres(alumno1);
+compararNombres(listaAlum1, listaAlum2);
+
+//let comparar1 = compararNombres(listaAlum1);
 
 console.log(comparar1);
 
