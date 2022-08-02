@@ -35,26 +35,31 @@ console.log(
 
 function compararNombres(persona1, persona2) {
   let encuentra = false;
-  for (let i = 0; i < persona1.length; i++) {
+  for (let i = 0; i < 2; i++) {
     encuentra = false;
-    for (let j = 0; j < persona2.length; j++) {
+    for (let j = 0; j < 2; j++) {
       if (persona1[i].innerText == persona2[j].innerText) {
         encuentra = true;
         break;
       }
     }
     if (!encuentra) {
-      alert("los arreglos no son iguales");
+      console.log("los arreglos no son iguales");
+      confirm("deseas comparar los apellidos?");
       break;
     }
   }
   if (encuentra) {
-    alert("si son iguales");
+    let colorCoincidencia = prompt(
+      "hubo coincidencias. Elija un color para destacar los nombres"
+    );
+    console.log("hubo coincidencias");
+    return colorCoincidencia;
   }
 }
 
 compararNombres(listaAlum1, listaAlum2);
-
+console.log(colorCoincidencia);
 //let comparar1 = compararNombres(listaAlum1);
 
 console.log(comparar1);
