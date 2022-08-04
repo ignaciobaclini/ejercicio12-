@@ -38,19 +38,37 @@ console.log(
 
 /* ------------------------------------------ */
 
-function compararNombres(primero) {
-  let colorDeCoincidencia;
-  for (let i = 0; i < primero.length; i++) {
-    if (primero[i].innerText == []) {
-    } else if (primero[i].innerText === alumno2[1].innerText) {
-      console.log("hubo coincidencia");
-      colorDeCoincidencia = prompt("hubo coincidencia. Dime un color");
-    } else {
+function compararNombres(persona1, persona2) {
+  let encuentra = false;
+  for (let i = 0; i < 2; i++) {
+    encuentra = false;
+    for (let j = 0; j < 2; j++) {
+      if (persona1[i].innerText == persona2[j].innerText) {
+        encuentra = true;
+        break;
+      }
+    }
+    if (!encuentra) {
+      console.log("los arreglos no son iguales");
+      confirm("deseas comparar los apellidos?");
+      break;
     }
   }
-  return colorDeCoincidencia;
+  if (encuentra) {
+    let colorCoincidencia = prompt(
+      "hubo coincidencias. Elija un color para destacar los nombres"
+    );
+    console.log("hubo coincidencias");
+    return colorCoincidencia;
+  }
 }
 
+<<<<<<< HEAD
+=======
+compararNombres(listaAlum1, listaAlum2);
+console.log(colorCoincidencia);
+//let comparar1 = compararNombres(listaAlum1);
+>>>>>>> 07a9d162148fc55b5d107e3fe8c6944bf4fb2b89
 
 
 
