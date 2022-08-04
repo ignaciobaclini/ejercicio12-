@@ -34,14 +34,13 @@ console.log(
 /* ------------------------------------------ */
 
 function compararNombres(persona1, persona2) {
-  let encuentra = false;
+  let encuentra = true;
   for (let i = 0; i < 2; i++) {
     encuentra = false;
     for (let j = 0; j < 2; j++) {
       if (persona1[i].innerText == persona2[j].innerText) {
         encuentra = true;
-
-        break;
+        console.log(persona1[i].innerText == persona2[j].innerText);
       }
     }
     if (!encuentra) {
