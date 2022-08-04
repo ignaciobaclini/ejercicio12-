@@ -45,6 +45,7 @@ function compararNombres(persona1, persona2) {
     for (let j = 0; j < 2; j++) {
       if (persona1[i].innerText == persona2[j].innerText) {
         encuentra = true;
+
         break;
       }
     }
