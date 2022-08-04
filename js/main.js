@@ -20,6 +20,11 @@ function nombreCompleto(alumno) {
   return nombreS;
 }
 
+
+
+
+
+
 let alumno1 = nombreCompleto(listaAlum1);
 let alumno2 = nombreCompleto(listaAlum2);
 
@@ -46,9 +51,45 @@ function compararNombres(primero) {
   return colorDeCoincidencia;
 }
 
-let comparar1 = compararNombres(alumno1);
 
-console.log(comparar1);
+
+
+
+
+
+
+function ganancias(balancesDeUnPeriodo) {
+    let ganancias = [];
+    for (let balance of balancesDeUnPeriodo) {
+      ganancias = ganancias + balance.ganancia + " ";
+    }
+    return ganancias;
+  }
+  ganancia = [
+    { mes: "enero", ganancia: 40 },
+    { mes: "febrero", ganancia: 12 },
+    { mes: "marzo", ganancia: 8 },
+  ];
+  
+  let algoritmoFor = ganancias(ganancia);
+  
+  console.log(algoritmoFor);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let comparar1 = compararNombres(alumno1); */
+
+/* console.log(comparar1); */
 
 if (i1n === i2n) {
   prompt("si son iguales. Elija un color para destacar los nombres");
@@ -104,3 +145,10 @@ let comparacion2 = integrantes.forEach( function (igualdad) {
     }
 
 }) */
+
+
+
+
+
+
+
